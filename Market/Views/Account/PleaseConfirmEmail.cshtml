@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "感謝您的註冊";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div>
+    <p>
+        請確認您的電子郵件以啟用此帳號。
+        <br/>
+        @if(!String.IsNullOrEmpty(ViewBag.Mail))
+        { 
+            <a href="@ViewBag.Mail" target="_blank">前往信箱</a>
+        }
+    </p>
+</div>

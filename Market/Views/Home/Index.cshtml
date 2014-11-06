@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET MVC- 網路購物</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting Started！</h2>
+        <p>
+            請先 
+            @Html.ActionLink("註冊", "Register", "Account", routeValues: null, htmlAttributes: new { id = "index_registerLink" })
+            /
+            @Html.ActionLink("登入", "Login", "Account", routeValues: null, htmlAttributes: new { id = "index_loginLink" }) 
+            以進行客戶、商品資料的輸入。
+        </p>
+    </div>
+</div>

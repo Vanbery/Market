@@ -1,0 +1,138 @@
+﻿@model Market.Models.Customer
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>客戶資料</h2>
+
+<h3>您確定要刪除這筆資料？</h3>
+<div>
+    <h4>刪除客戶資料</h4>
+    <hr />
+    @Html.HiddenFor(model => model.SN)
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Boss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Boss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Branch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Branch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BranchCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BranchCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Account)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

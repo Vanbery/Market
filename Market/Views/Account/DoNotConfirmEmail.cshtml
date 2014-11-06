@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "您尚未進行Email認證！";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>如未收到認證信件請進行重新寄發認證信</p>
+@Html.ActionLink("重寄認證信", "ReSendEmail", "Account", new { email = ViewBag.Email }, htmlAttributes: new { id = "resendLink" })
+
